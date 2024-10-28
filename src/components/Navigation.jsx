@@ -6,30 +6,31 @@ import Cart from "./Cart"
 import Profile from "./Profile"
 import OpenCart from './OpenCart'
 
-function Navigation({ handlerMenu, handlerCart}) {
+function Navigation({ handlerMenu, handlerCart, isCartOpen}) {
   return(
-    <div className="relative flex items-center justify-between lg:border-b lg:mx-20 lg:mb-5 lg:mt-0 m-3 sm:m-5 min-w-[280px] transition ease-in-out delay-150">
+    <div className="relative flex items-center justify-between md:border-b lg:mx-20 md:mb-5 md:mt-0 m-3 sm:m-5 min-w-[280px] transition ease-in-out delay-150">
       <div className="flex gap-3 md:gap-8 items-center">
         <Menu handlerMenu={handlerMenu} />
         <Logo />
-        <ul className="hidden lg:flex lg:gap-6">
+        <ul className="hidden md:flex md:gap-6">
           <List />
         </ul>
       </div>
       
       <div className="flex items-center gap-3 md:gap-5">
-        <Cart handleCart={handlerCart} />
+        <Cart handlerCart={handlerCart} />
         <Profile />
       </div>
 
-      <OpenCart />
+      <OpenCart isCartOpen={isCartOpen} />
     </div>
   )
 }
 
 Navigation.propTypes = {
   handlerMenu: PropTypes.func,
-  handlerCart: PropTypes.func
+  handlerCart: PropTypes.func,
+  isCartOpen: PropTypes.bool
 }
 
 export default Navigation
