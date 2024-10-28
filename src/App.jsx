@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navigation from "./components/Navigation"
 import NavigationMobile from "./components/NavigationMobile"
 import ProductDisplay from './components/ProductDisplay'
+import Description from './components/Description'
 
 function App() {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false)
@@ -41,9 +42,9 @@ function App() {
   return (
     <div className="max-w-[1440px] mx-auto">
       <Navigation handlerMenu={handlerMenu} handlerCart={handlerCart} isCartOpen={isCartOpen}/>
-      <NavigationMobile isNavigationOpen={isNavigationOpen} handlerMenu={handlerMenu} />
       <ProductDisplay pictureIndex={pictureIndex} handlerPicture={handlerPicture} handlerPictureNext={handlerPictureNext} handlerPicturePrevious={handlerPicturePrevious} />
-
+      <Description />
+      <NavigationMobile isNavigationOpen={isNavigationOpen} handlerMenu={handlerMenu} />
     </div>
   )
 }
