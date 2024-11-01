@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="max-w-[1440px] mx-auto">
       <Navigation handlerMenu={handlerMenu} handlerCart={handlerCart} isCartOpen={isCartOpen}/>
+      <NavigationMobile isNavigationOpen={isNavigationOpen} handlerMenu={handlerMenu} />
       <ProductDisplay pictureIndex={pictureIndex} handlerPicture={handlerPicture} handlerPictureNext={handlerPictureNext} handlerPicturePrevious={handlerPicturePrevious} />
       <Description />
-      <NavigationMobile isNavigationOpen={isNavigationOpen} handlerMenu={handlerMenu} />
     </div>
   )
 }

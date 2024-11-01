@@ -8,7 +8,7 @@ import SliderButton from './SliderButton'
 function ProductDisplay({ pictureIndex, handlerPicturePrevious, handlerPictureNext }) {
   const pictures = [Picture1, Picture2, Picture3, Picture4];
   return(
-    <div className='w-full min-h-72 min-w-[304px] relative -z-10'>
+    <div className='w-full min-h-72 min-w-[304px] relative'>
       <div className='overflow-hidden'>
         <div className='w-full h-full flex transition-transform duration-500 ease-in-out' 
           style={{ transform: `translateX(-${pictureIndex * 100}%)` }}>

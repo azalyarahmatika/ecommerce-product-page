@@ -15,7 +15,7 @@ function NavigationMobile({ isNavigationOpen, handlerMenu }) {
   }, [isNavigationOpen]);
 
   return(
-    <div className={`absolute inset-0 min-w-[304px] ${isNavigationOpen ? 'block' : 'hidden'}`}>
+    <div className={`absolute inset-0 min-w-[304px] z-50 ${isNavigationOpen ? 'block' : 'hidden'}`}>
       <div className="w-full min-h-screen opacity-75 bg-black absolute"></div>
       <div className="relative w-3/5 min-h-screen p-3 pt-4 sm:p-5 bg-white">
         <div className='h-5 w-fit sm:h-6 md:h-7 cursor-pointer mb-10' onClick={handlerMenu}>
