@@ -45,4 +45,8 @@
     ease-in-out
     delay-150;
   }
+
+  .change-black-svg {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(3%) saturate(2701%) hue-rotate(207deg) brightness(95%) contrast(101%);
+  }
 }

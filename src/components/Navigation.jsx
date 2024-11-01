@@ -6,7 +6,7 @@ import Cart from "./Cart"
 import Profile from "./Profile"
 import OpenCart from './OpenCart'
 
-function Navigation({ handlerMenu, handlerCart, isCartOpen}) {
+function Navigation({ handlerMenu, handlerCart, isCartOpen, itemsInCart}) {
   return(
     <div className="relative flex items-center justify-between md:border-b lg:mx-20 md:mb-5 md:mt-0 m-3 sm:m-5 min-w-[280px] transition ease-in-out delay-150">
       <div className="flex gap-3 md:gap-8 items-center">
@@ -22,7 +22,7 @@ function Navigation({ handlerMenu, handlerCart, isCartOpen}) {
         <Profile />
       </div>
 
-      <OpenCart isCartOpen={isCartOpen} />
+      <OpenCart itemsInCart={itemsInCart} isCartOpen={isCartOpen} />
     </div>
   )
 }
@@ -30,7 +30,8 @@ function Navigation({ handlerMenu, handlerCart, isCartOpen}) {
 Navigation.propTypes = {
   handlerMenu: PropTypes.func,
   handlerCart: PropTypes.func,
-  isCartOpen: PropTypes.bool
+  isCartOpen: PropTypes.bool,
+  itemsInCart: PropTypes.number
 }
 
 export default Navigation
